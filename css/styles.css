@@ -1,0 +1,23 @@
+/* --------------------------------------------- */
+/* Global Styles */
+/* --------------------------------------------- */
+
+/* HTML & Body Styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 140px; /* Adjust based on your navbar height */
+}
+
+body {
+  /* Background Color for Dark Mode */
+  background-color: #202020;
+  /* Typographic Styles */
+  font-family:'Inter', Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  /* Typographic Color for Dark Mode */
+  color: #FFF;
+}
