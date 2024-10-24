@@ -1,23 +1,417 @@
 /* --------------------------------------------- */
-/* Global Styles */
+/* GLOBAL - Styles */
 /* --------------------------------------------- */
 
-/* HTML & Body Styles */
+
+
+/* HTML & BODY - Styles */
+/* --------------------------------------------- */
+
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 140px; /* Adjust based on your navbar height */
+  /* Adjust based on your navbar height */
+  /* scroll-padding-top: 8.75rem;  */
 }
 
 body {
-  /* Background Color for Dark Mode */
-  background-color: #202020;
   /* Typographic Styles */
-  font-family:'Inter', Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400; /* Regular */
+  /* Regular */
+  font-weight: 400; 
   font-style: normal;
   font-size: 16px;
   line-height: 1.5;
+  letter-spacing: 0.0625rem;
+  /* Background Color for Dark Mode */
+  background-color: #202020;
   /* Typographic Color for Dark Mode */
   color: #FFF;
+  /* overflow: hidden; */
 }
+
+/* FONT - Styles */
+/* --------------------------------------------- */
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  color: #FFF;
+  /* Bold */
+  font-weight: 700;
+}
+
+h1 {
+  /* 115.5px */
+  font-size: 7.2188rem;
+}
+
+h2 {
+  /* 86.6px */
+  font-size: 5.4125rem;
+}
+
+h3 {
+  /* 73.9px */
+  font-size: 4.6188rem;
+}
+
+span {
+  color: #ABABAB;
+  /* Extra Light */
+  font-weight: 200;
+  font-style: italic;
+}
+
+.capitalized-heading {
+  /* 14px */
+  font-size: 0.875rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #ABABAB;
+}
+
+/* LINK - Styles */
+/* --------------------------------------------- */
+
+/* Default focus style for all focusable elements */
+:focus {
+  outline: 0.125rem solid #F6BE2C; 
+  outline-offset: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+/* Link State */
+a {
+  text-decoration: none;
+  line-height: 1;
+  /* Semi-bold */
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ABABAB;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* BUTTON - Styles */
+/* --------------------------------------------- */
+
+/* 1. TOGGLE BUTTON - Link State */
+/* .toggle-button {
+  cursor: pointer;
+} */
+/* Hover states */
+/* Active state */
+
+/* 2. PRIMARY BUTTON - Link State */
+.primary-button {
+  line-height: 1;
+  /* Semi-bold */
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  background: linear-gradient(90deg, rgba(46, 46, 46, 0.8) 0%, rgba(46, 46, 46, 0.4) 50%, rgba(74, 74, 74, 0.8)  100%);
+  color: #FFF;
+  /* 16px 27.675px 16px 32px */
+  padding: 1rem 1.7297rem 1rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* 5.675px */
+  gap: 0.3547rem;
+  border: 0.0938rem solid #FFF;
+  /* 8px */
+  border-radius: 0.5rem;
+  /* 0 3px 10px */
+  box-shadow: 0 0.1875rem 0.625rem rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background 0.6s ease-in-out, all 0.3s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.arrow-60-deg-icon {
+  /* 12px */
+  height: 0.75rem;
+  color: #F6BE2C;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover states */
+.primary-button:hover {
+  border-color: #F6BE2C;
+  background: linear-gradient(135deg, rgba(46, 46, 46, 0.8) 0%, rgba(46, 46, 46, 0.4) 50%, rgba(74, 74, 74, 0.8) 100%);
+  /* 0 3px 10px */
+  box-shadow: 0 0.1875rem 0.625rem rgba(246, 190, 10, 0.3);
+}
+
+.primary-button:hover .arrow-60-deg-icon {
+  /* Define what should happen to .arrow-60-deg-icon when .primary-button is hovered */
+  transform: rotate(30deg);
+}
+
+/* Active state */
+.primary-button:active {
+  /* Slight "press" effect */
+  transform: scale(0.98); 
+  /* 0 1.5px 5px */
+  box-shadow: 0 0.0938rem 0.3125rem rgba(246, 190, 10, 0.3);
+}
+
+
+
+/* --------------------------------------------- */
+/* HOMEPAGE HERO - Styles */
+/* --------------------------------------------- */
+
+
+
+/* Navbar */
+/* --------------------------------------------- */
+
+.navbar {
+  margin-top: 1.875rem;
+  height: 3.75rem;
+  padding: 0.625rem; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #434343;
+  border-radius: .5rem;
+  /* 1320px for screen 1440*/
+  max-width: 82.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #202020;
+}
+
+/* Navbar left */
+/* --------------------------------------------- */
+.navbar-left a {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: .875rem;
+  position: relative;
+}
+
+.navbar-left img {
+  height: 2.5rem;
+  width: 2.5rem;
+  outline: 1px solid #434343;
+  outline-offset: -1px;
+  border-radius: 50%;
+  margin-right: .5rem;
+  box-shadow: 0 .25rem .25rem rgba(0, 0, 0, 0.25);
+}
+
+.navbar-left span {
+  color: #FFF;
+  /* Semi-Bold */
+  font-weight: 600;
+  font-style: normal;
+  margin: 0 .125rem;
+}
+
+.navbar-left a > div {
+  position: relative;
+}
+
+.navbar-left a > div::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  /* 5px below the element */
+  bottom: -0.3125rem; 
+  width: 0;
+  height: 1px;
+  background-color: #F6BE2C;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Hover */
+.navbar-left a:hover > div::after {
+  width: 100%;
+}
+
+/* Navbar right */
+/* --------------------------------------------- */
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-btn svg {
+  margin-top: .25rem;
+  margin-left: .3125rem;
+}
+
+.navbar-right ul li {
+  display: inline-block;
+}
+
+.navbar-right ul li:not(:first-of-type) {
+  display: inline-block;
+  margin-left: 4.6875rem;
+}
+
+.navbar-right a {
+  position: relative;
+  text-decoration: none;
+  color: #FFF;
+}
+
+/* Start of Hover */
+.navbar-right a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  /* 5px below the element */
+  bottom: -0.3125rem; 
+  width: 0;
+  height: 1px;
+  background-color: #F6BE2C;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-right a:hover::after {
+  /* Expands to full width on hover */
+  width: 100%; 
+}
+
+/* Dropdown button for projects */
+/* --------------------------------------------- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  position: relative;
+  text-decoration: none;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  color: #FFF;
+  /* Semi-Bold */
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.dropdown-btn svg {
+  transition: color 0.3s ease-in-out;
+}
+
+/* Arrow Hover */
+.dropdown-btn:hover svg {
+  color: #F6BE2C;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Start of Hover */
+.dropdown-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  /* 5px below the element */
+  bottom: -0.3125rem;
+  width: 0;
+  height: 1px;
+  background-color: #F6BE2C;
+  transition: width 0.3s ease-in-out;
+}
+
+.dropdown-btn:hover::after {
+  /* Expands to full width on hover */
+  width: 100%;
+}
+
+.dropdown-content {
+  /* display: none; */
+  position: absolute;
+  top: 2.5625rem;
+  left: -1.3125rem;
+  width: 13.125rem;
+  border: 1px solid #434343;
+  border-radius: 0 0 .5rem .5rem;
+  background-color: #202020;
+  padding: .625rem 1.25rem;
+  z-index: 1;
+}
+
+.dropdown .dropdown-content li {
+  margin-left: 0;
+  padding-top: .625rem;
+  padding-bottom: .625rem;
+}
+
+.dropdown .dropdown-content .o-d,
+.dropdown .dropdown-content .s-g {
+  margin-left: 0;
+}
+
+/* Toggle button */
+/* --------------------------------------------- */
+/* Toggle Container Styles */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Hide default checkbox */
+.toggle-container input[type="checkbox"] {
+  display: none;
+}
+
+/* Pill (Toggle Switch Base) */
+.toggle-label {
+  position: relative;
+  width: 2.5rem; /* Adjust width to 2.5rem (40px) */
+  height: 1.25rem; /* Set height to 20px (1.25rem) */
+  background-color: #434343;
+  border-radius: 1.25rem; /* Match the pill height for full rounding */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: inset 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25); /* Inner shadow */
+  padding: 0 0.25rem; /* Maintain padding */
+}
+
+/* Ball Inside the Toggle */
+.toggle-ball {
+  position: absolute;
+  top: 50%;
+  left: 0.25rem;
+  width: 0.75rem; /* Set width to 12px (0.75rem) */
+  height: 0.75rem; /* Set height to 12px (0.75rem) */
+  background-color: #F6BE2C;
+  border-radius: 50%;
+  transform: translateY(-50%); /* Center the ball vertically */
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.4); /* Drop shadow */
+}
+
+/* Checkbox Checked State - Moves the ball to the right */
+input[type="checkbox"]:checked + .toggle-label .toggle-ball {
+  transform: translate(1.25rem, -50%); /* Adjusted for new dimensions */
+}
+
+/* Checkbox Checked - The pill background remains the same */
+input[type="checkbox"]:checked + .toggle-label {
+  background-color: #434343; /* No color change */
+}
+
+/* Toggle Text */
+.toggle-text {
+  color: #FFF;
+  font-weight: 600;
+  font-style: normal;
+  margin-left: .25rem;
+}
+
