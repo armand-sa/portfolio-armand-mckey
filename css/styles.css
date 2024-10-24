@@ -169,7 +169,11 @@ a {
 /* --------------------------------------------- */
 
 .navbar {
-  margin-top: 1.875rem;
+  position: fixed;
+  top: 1.875rem;       
+  left: 50%;      
+  transform: translateX(-50%);
+  z-index: 1000;
   height: 3.75rem;
   padding: 0.625rem; 
   display: flex;
@@ -179,6 +183,8 @@ a {
   border-radius: .5rem;
   /* 1320px for screen 1440*/
   max-width: 82.5rem;
+  /* Makes the navbar adapt to the screen width accurately */
+  width: 91.67%;
   margin-left: auto;
   margin-right: auto;
   background-color: #202020;
@@ -333,7 +339,7 @@ a {
 }
 
 .dropdown-content {
-  /* display: none; */
+  display: none;
   position: absolute;
   top: 2.5625rem;
   left: -1.3125rem;
@@ -344,6 +350,12 @@ a {
   padding: .625rem 1.25rem;
   z-index: 1;
 }
+
+/* Dropdown content when shown */
+.dropdown-content.show {
+  display: block;            /* Make it visible */
+}
+
 
 .dropdown .dropdown-content li {
   margin-left: 0;
